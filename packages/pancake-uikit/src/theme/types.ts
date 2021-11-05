@@ -55,6 +55,7 @@ export type Colors = {
   invertedContrast: string;
   input: string;
   inputSecondary: string;
+  inputBackground: string;
   background: string;
   backgroundDisabled: string;
   backgroundAlt: string;
@@ -62,6 +63,9 @@ export type Colors = {
   text: string;
   textDisabled: string;
   textSubtle: string;
+  textCommon: string;
+  textCommonSecond: string;
+  textGrey: string;
   disabled: string;
 
   // Gradients

@@ -20,13 +20,14 @@ const BottomNavItem: React.FC<BottomNavItemProps> = ({
           iconName={iconName}
           height="22px"
           width="21px"
-          color={isActive ? "secondary" : "textSubtle"}
+          color={isActive ? "primary" : "primary"}
+          activeColor="primary"
           isActive={isActive}
           activeBackgroundColor="backgroundAlt"
         />
       )}
       <StyledBottomNavText
-        color={isActive ? "text" : "textSubtle"}
+        color={isActive ? "primary" : "primary"}
         fontWeight={isActive ? "600" : "400"}
         fontSize="10px"
       >

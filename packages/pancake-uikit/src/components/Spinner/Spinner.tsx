@@ -1,52 +1,40 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import PanIcon from "./PanIcon";
-import PancakeIcon from "./PancakeIcon";
+import CircleIcon from "./CircleIcon";
 import { SpinnerProps } from "./types";
 
 const rotate = keyframes`
-  from {
-    transform: rotate(0deg);
+  0%   {
+    transform: scale(0);
+    opacity: 1;
   }
-  to {
-    transform: rotate(360deg);
+  75%  {
+    transform: scale(.75)
+    opacity: 1;
   }
-`;
-
-const float = keyframes`
-	0% {
-		transform: translatey(0px);
-	}
-	50% {
-		transform: translatey(10px);
-	}
-	100% {
-		transform: translatey(0px);
-	}
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
 `;
 
 const Container = styled.div`
   position: relative;
 `;
 
-const RotatingPancakeIcon = styled(PancakeIcon)`
+const RotatingPancakeIcon = styled(CircleIcon)`
   position: absolute;
   top: 0;
   left: 0;
-  animation: ${rotate} 2s linear infinite;
-  transform: translate3d(0, 0, 0);
-`;
-
-const FloatingPanIcon = styled(PanIcon)`
-  animation: ${float} 6s ease-in-out infinite;
-  transform: translate3d(0, 0, 0);
+  margin-top: -64px;
+  margin-left: -30px;
+  animation: ${rotate} 1.4s infinite;
 `;
 
 const Spinner: React.FC<SpinnerProps> = ({ size = 128 }) => {
   return (
     <Container>
       <RotatingPancakeIcon width={`${size * 0.5}px`} />
-      <FloatingPanIcon width={`${size}px`} />
     </Container>
   );
 };

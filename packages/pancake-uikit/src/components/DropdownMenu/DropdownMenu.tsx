@@ -125,7 +125,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
 
   useEffect(() => {
     if (setMenuOpenByIndex && index !== undefined) {
-      setMenuOpenByIndex((prevValue) => ({ ...prevValue, [index]: isOpen }));
+      showItemsOnMobile && setMenuOpenByIndex((prevValue) => ({ ...prevValue, [index]: isOpen }));
     }
   }, [isOpen, setMenuOpenByIndex, index]);
 

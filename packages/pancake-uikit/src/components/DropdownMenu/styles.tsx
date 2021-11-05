@@ -9,9 +9,9 @@ const getTextColor = ({
   theme,
 }: StyledDropdownMenuItemProps & { theme: DefaultTheme; $isActive: boolean }) => {
   if (disabled) return theme.colors.textDisabled;
-  if ($isActive) return theme.colors.secondary;
+  if ($isActive) return theme.colors.primary;
 
-  return theme.colors.textSubtle;
+  return theme.colors.primary;
 };
 
 export const DropdownMenuItem = styled.button<StyledDropdownMenuItemProps & { $isActive: boolean }>`
