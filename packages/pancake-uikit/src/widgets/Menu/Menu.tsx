@@ -65,6 +65,7 @@ const Menu: React.FC<NavProps> = ({
   activeSubItem,
   langs,
   buyCakeLabel,
+  imgUrl,
   children,
 }) => {
   const { isMobile } = useMatchBreakpoints();
@@ -110,15 +111,10 @@ const Menu: React.FC<NavProps> = ({
     <Wrapper>
       <StyledNav showMenu={showMenu}>
         <Flex>
-          <Logo isDark={isDark} href={homeLink?.href ?? "/"} />
-          {!isMobile && <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />}
+          <Logo imgUrl={imgUrl} href={homeLink?.href ?? "/"} />
+          {!isMobile && <MenuItems isMain items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />}
         </Flex>
         <Flex alignItems="center">
-          {!isMobile && (
-            <Box mr="12px">
-              <CakePrice cakePriceUsd={cakePriceUsd} />
-            </Box>
-          )}
           <Box mt="4px">
             <LangSelector
               currentLang={currentLang}

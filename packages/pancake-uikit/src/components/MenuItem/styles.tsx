@@ -25,9 +25,22 @@ const StyledMenuItem = styled.a<StyledMenuItemProps>`
   display: flex;
   align-items: center;
 
-  color: ${({ theme, $isActive }) => ($isActive ? theme.colors.primary : theme.colors.primary)};
+  color: ${({ theme, $isActive }) => ($isActive ? theme.colors.textCommon : theme.colors.textCommon)};
   font-size: 16px;
-  font-weight: ${({ $isActive }) => ($isActive ? "600" : "400")};
+  /* font-weight: ${({ $isActive }) => ($isActive ? "600" : "400")}; */
+
+  ${({ $isActive, $isMain }) =>
+    $isMain && $isActive &&
+    `
+    &:before {
+      content: "";
+      position: absolute;
+      width: calc(100% - 32px);
+      height: 2px;
+      bottom: 8px;
+      background: linear-gradient(90deg, #9F9F9F 0%, #3C3C3C 100%);
+    }
+  `}
 
   ${({ $statusColor, theme }) =>
     $statusColor &&

@@ -137,6 +137,7 @@ export const NotConnected: React.FC = () => {
         currentLang="EN"
         links={links}
         subLinks={subLinks}
+        imgUrl=""
         footerLinks={footerLinks}
       >
         <div>
@@ -167,6 +168,7 @@ export const WithoutConnectButton: React.FC = () => {
         currentLang="EN"
         links={links}
         footerLinks={footerLinks}
+        imgUrl=""
         subLinks={subLinks}
       >
         <div>
@@ -190,6 +192,7 @@ export const WithSubmenuSelected: React.FC = () => {
         cakePriceUsd={0.23158668932877668}
         links={links}
         subLinks={subLinks}
+        imgUrl=""
         footerLinks={footerLinks}
       >
         <div>

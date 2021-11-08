@@ -6,7 +6,7 @@ import MenuItem from "../MenuItem/MenuItem";
 import IconComponent from "../Svg/IconComponent";
 import { MenuItemsProps } from "./types";
 
-const MenuItems: React.FC<MenuItemsProps> = ({ items = [], activeItem, activeSubItem, ...props }) => {
+const MenuItems: React.FC<MenuItemsProps> = ({ items = [], activeItem, activeSubItem, isMain, ...props }) => {
   return (
     <Flex {...props}>
       {items.map(({ label, items: menuItems = [], href, icon = "" }) => {
@@ -16,10 +16,11 @@ const MenuItems: React.FC<MenuItemsProps> = ({ items = [], activeItem, activeSub
           <DropdownMenu key={`${label}#${href}#${icon}`} items={menuItems} py={1} activeItem={activeSubItem}>
             <MenuItem
               href={isTouchDevice() && menuItems && menuItems.length > 0 ? "" : href}
+              isMain={isMain}
               isActive={isActive}
               statusColor={statusColor}
             >
-              {label || <IconComponent iconName={icon} color={isActive ? "primary" : "primary"} />}
+              {label || <IconComponent iconName={icon} color={isActive ? "textCommon" : "textCommon"} />}
             </MenuItem>
           </DropdownMenu>
         );

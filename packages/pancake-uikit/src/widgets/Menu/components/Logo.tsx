@@ -5,9 +5,14 @@ import Flex from "../../../components/Box/Flex";
 import { LogoIcon, LogoWithTextIcon } from "../../../components/Svg";
 
 interface Props {
-  isDark: boolean;
+  imgUrl: string;
   href: string;
 }
+
+const StyledLogoImage = styled.img`
+  width: 315px;
+  height: 56px;
+`;
 
 const blink = keyframes`
   0%,  100% { transform: scaleY(1); } 
@@ -18,13 +23,13 @@ const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
   .mobile-icon {
-    width: 121px;
+    width: 315px;
     ${({ theme }) => theme.mediaQueries.nav} {
       display: none;
     }
   }
   .desktop-icon {
-    width: 121px;
+    width: 315px;
     display: none;
     ${({ theme }) => theme.mediaQueries.nav} {
       display: block;
@@ -44,12 +49,12 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const Logo: React.FC<Props> = ({ isDark, href }) => {
+const Logo: React.FC<Props> = ({ imgUrl, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
-      <LogoIcon className="mobile-icon" isDark={isDark} />
-      <LogoWithTextIcon className="desktop-icon" isDark={isDark} />
+      <StyledLogoImage className="mobile-icon" src={imgUrl} />
+      <StyledLogoImage className="desktop-icon" src={imgUrl} />
     </>
   );
 
@@ -68,4 +73,4 @@ const Logo: React.FC<Props> = ({ isDark, href }) => {
   );
 };
 
-export default React.memo(Logo, (prev, next) => prev.isDark === next.isDark);
+export default React.memo(Logo, (prev, next) => true);
