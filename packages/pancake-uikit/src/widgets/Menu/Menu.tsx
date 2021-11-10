@@ -112,9 +112,10 @@ const Menu: React.FC<NavProps> = ({
       <StyledNav showMenu={showMenu}>
         <Flex>
           <Logo imgUrl={imgUrl} href={homeLink?.href ?? "/"} />
-          {!isMobile && <MenuItems isMain items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />}
         </Flex>
         <Flex alignItems="center">
+          {!isMobile && <MenuItems isMain items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />}
+          {userMenu}
           <Box mt="4px">
             <LangSelector
               currentLang={currentLang}
@@ -125,7 +126,7 @@ const Menu: React.FC<NavProps> = ({
               hideLanguage
             />
           </Box>
-          {globalMenu} {userMenu}
+          {globalMenu}
         </Flex>
       </StyledNav>
       {subLinks && (
