@@ -26,6 +26,9 @@ const Text = styled.div<TextProps>`
     `white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;`}
+  ${({ breakWord }) =>
+    breakWord &&
+    `word-break: break-word;`}
 
   ${space}
   ${typography}
