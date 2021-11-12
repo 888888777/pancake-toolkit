@@ -48,8 +48,8 @@ const Logo: React.FC<Props> = ({ isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
-      <LogoIcon className="mobile-icon" isDark={isDark} />
-      <LogoWithTextIcon className="desktop-icon" isDark={isDark} />
+      <LogoIcon className="mobile-icon" />
+      <LogoWithTextIcon height={40} className="desktop-icon" isDark={isDark} />
     </>
   );
 
