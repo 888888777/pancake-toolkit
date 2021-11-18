@@ -19,7 +19,7 @@ export { default as BunnyCardsIcon } from "./Icons/BunnyCards";
 export { default as BunnyPlaceholderIcon } from "./Icons/BunnyPlaceholder";
 export { default as BurnedAmountIcon } from "./Icons/BurnedAmount";
 export { default as CameraIcon } from "./Icons/Camera";
-export { default as CardsIcon } from "./Icons/Cards";
+export { default as Cards } from "./Icons/Cards";
 export { default as CardViewIcon } from "./Icons/CardView";
 export { default as CalculateIcon } from "./Icons/Calculate";
 export { default as CircleOutlineIcon } from "./Icons/CircleOutline";
