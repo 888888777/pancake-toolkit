@@ -6,6 +6,9 @@ const Icons = IconModule as unknown as { [key: string]: React.FC<SvgProps> };
 
 const IconComponent: React.FC<{ iconName: string } & SvgProps> = ({ iconName, ...props }) => {
   const IconElement = Icons[`${iconName}Icon`];
+  console.log(Icons)
+  console.log("--------",iconName)
+  console.log("--------",IconElement)
   return IconElement ? <IconElement {...props} /> : null;
 };
 
