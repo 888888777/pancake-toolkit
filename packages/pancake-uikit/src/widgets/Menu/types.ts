@@ -31,4 +31,6 @@ export interface NavProps {
   langs: Language[];
   setLang: (lang: Language) => void;
   imgUrl: string;
+  navBackgroundImgUrl: string;
+  footerBackgroundImgUrl: string;
 }

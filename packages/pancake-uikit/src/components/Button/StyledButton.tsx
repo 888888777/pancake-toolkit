@@ -46,7 +46,7 @@ const getOpacity = ({ $isLoading = false }: TransientButtonProps) => {
 const StyledButton = styled.button<BaseButtonProps>`
   align-items: center;
   border: 0;
-  border-radius: 20px;
+  border-radius: ${({ variant }) => (variant === 'steel' ? 'none' : '20px')};
   box-shadow: 0px -1px 0px 0px rgba(14, 14, 44, 0.4) inset;
   cursor: pointer;
   display: inline-flex;
@@ -80,6 +80,13 @@ const StyledButton = styled.button<BaseButtonProps>`
   })}
   ${layout}
   ${space}
+
+  ${({ variant, theme }) => 
+    variant === 'steel' 
+      && `
+        background: ${theme.colors.gradients.steelGradients}
+      `
+  }
 `;
 
 export default StyledButton;

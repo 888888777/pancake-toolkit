@@ -3,8 +3,15 @@ import { darkColors } from "../../theme/colors";
 import { Box, Flex } from "../Box";
 import SocialLinks from "./Components/SocialLinks";
 
-export const StyledFooter = styled(Flex)`
-  background: ${darkColors.backgroundAlt};
+export const StyledFooter = styled(Flex)<{ footerBackgroundImgUrl: string }>`
+  /* background: ${darkColors.backgroundAlt}; */
+
+  ${({ footerBackgroundImgUrl }) => 
+  footerBackgroundImgUrl 
+      && `
+        background: url(${footerBackgroundImgUrl}) center/cover no-repeat;
+      `
+  }
 `;
 
 export const StyledList = styled.ul`
@@ -16,15 +23,24 @@ export const StyledList = styled.ul`
   }
 `;
 
-export const StyledListItem = styled.li`
+export const StyledDesc = styled.div`
+  margin-top: 60px;
   font-size: 16px;
+  color: #585858;
+  line-height: 19px;
+`;
+
+export const StyledListItem = styled.li`
+  font-size: 14px;
   margin-bottom: 8px;
   text-transform: capitalize;
 
   &:first-child {
-    color: ${darkColors.secondary};
-    font-weight: 600;
+    font-size: 16px;
+    color: ${darkColors.primary};
+    font-weight: 400;
     text-transform: uppercase;
+    margin-bottom: 44px;
   }
 `;
 

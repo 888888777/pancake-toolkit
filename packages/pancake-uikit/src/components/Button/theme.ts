@@ -4,37 +4,40 @@ export const scaleVariants = {
   [scales.MD]: {
     height: "40px",
     padding: "0 24px",
+    fontWeight: "normal",
   },
   [scales.SM]: {
     height: "32px",
     padding: "0 16px",
+    fontWeight: "normal",
   },
   [scales.XS]: {
     height: "20px",
     fontSize: "12px",
     padding: "0 8px",
+    fontWeight: "normal",
   },
 };
 
 export const styleVariants = {
   [variants.PRIMARY]: {
-    backgroundColor: "primary",
+    backgroundColor: "greyPrimary",
     color: "white",
   },
   [variants.SECONDARY]: {
     backgroundColor: "transparent",
     border: "2px solid",
-    borderColor: "primary",
+    borderColor: "greyPrimary",
     boxShadow: "none",
-    color: "primary",
+    color: "greyPrimary",
     ":disabled": {
-      backgroundColor: "transparent",
+      color: "disableGrey",
     },
   },
   [variants.TERTIARY]: {
     backgroundColor: "tertiary",
     boxShadow: "none",
-    color: "primary",
+    color: "text",
   },
   [variants.SUBTLE]: {
     backgroundColor: "textSubtle",
@@ -50,12 +53,18 @@ export const styleVariants = {
   },
   [variants.TEXT]: {
     backgroundColor: "transparent",
-    color: "primary",
+    color: "greyPrimary",
     boxShadow: "none",
   },
   [variants.LIGHT]: {
     backgroundColor: "input",
     color: "textSubtle",
     boxShadow: "none",
+  },
+  [variants.STEEL]: {
+    boxShadow: "none",
+    borderColor: "steelBorder",
+    borderWidth: "1px",
+    color: "text",
   },
 };

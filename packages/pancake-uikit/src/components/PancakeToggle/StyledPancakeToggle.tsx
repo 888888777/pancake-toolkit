@@ -81,24 +81,24 @@ export const PancakeStack = styled.div<HandleProps>`
   }
 
   .pancake {
-    background: #e27c31;
+    background: ${({ theme }) => theme.colors.deepGreyPrimary};
     border-radius: 50%;
     width: ${getScale("pancakeSize")};
     height: ${getScale("pancakeSize")};
     position: absolute;
     transition: 0.4s ease;
-    top: 2px;
+    top: 4px;
     left: 4px;
-    box-shadow: 0 ${getScale("pancakeThickness")} 0 ${getScale("pancakeThickness")} #fbbe7c;
+    /* box-shadow: 0 ${getScale("pancakeThickness")} 0 ${getScale("pancakeThickness")} #fbbe7c; */
   }
 
   .pancake:nth-child(1) {
     background: ${({ theme }) => theme.pancakeToggle.handleBackground};
-    box-shadow: 0 ${getScale("pancakeThickness")} 0 ${getScale("pancakeThickness")}
-      ${({ theme }) => theme.pancakeToggle.handleShadow};
+    /* box-shadow: 0 ${getScale("pancakeThickness")} 0 ${getScale("pancakeThickness")}
+      ${({ theme }) => theme.pancakeToggle.handleShadow}; */
   }
 
-  .pancake:nth-child(2) {
+  /* .pancake:nth-child(2) {
     left: 0;
     top: ${getScale("pancakeTwoOffset")};
     transform: scale(0);
@@ -142,7 +142,7 @@ export const PancakeStack = styled.div<HandleProps>`
     box-shadow: 0 ${getScale("butterThickness")} 0 ${getScale("butterThickness")} #d67823;
     transform: scale(0);
     transition: 0.2s ease;
-  }
+  } */
 `;
 
 export const PancakeInput = styled.input<InputProps>`
@@ -163,11 +163,11 @@ export const PancakeInput = styled.input<InputProps>`
 
   &:checked + label .pancake:nth-child(1) {
     background: #e27c31;
-    box-shadow: 0 ${getScale("pancakeThickness")} 0 ${getScale("pancakeThickness")} #fbbe7c;
+    /* box-shadow: 0 ${getScale("pancakeThickness")} 0 ${getScale("pancakeThickness")} #fbbe7c; */
     transition-delay: 0.2s;
   }
 
-  &:checked + label .pancake:nth-child(2) {
+  /* &:checked + label .pancake:nth-child(2) {
     transform: scale(1);
     transition-delay: 0.2s;
   }
@@ -180,13 +180,13 @@ export const PancakeInput = styled.input<InputProps>`
   &:checked + label .butter {
     transform: scale(1);
     transition-delay: 0.6s;
-  }
+  } */
 `;
 
 export const PancakeLabel = styled.label<PancakeToggleProps>`
   width: ${getScale("toggleWidth")};
   height: ${getScale("toggleHeight")};
-  background: ${({ theme, checked }) => theme.colors[checked ? "success" : "input"]};
+  background: ${({ theme, checked }) => theme.colors[checked ? "success" : "greyPrimary"]};
   box-shadow: ${({ theme }) => theme.shadows.inset};
   display: inline-block;
   border-radius: 50px;

@@ -2,35 +2,35 @@ import { Language } from "../LangSelector/types";
 import { FooterLinkType } from "./types";
 
 export const footerLinks: FooterLinkType[] = [
-  {
-    label: "About",
-    items: [
-      {
-        label: "Contact",
-        href: "https://docs.pancakeswap.finance/contact-us",
-      },
-      {
-        label: "Blog",
-        href: "https://pancakeswap.medium.com/",
-      },
-      {
-        label: "Community",
-        href: "https://docs.pancakeswap.finance/contact-us/telegram",
-      },
-      {
-        label: "CAKE",
-        href: "https://docs.pancakeswap.finance/tokenomics/cake",
-      },
-      {
-        label: "—",
-      },
-      {
-        label: "Online Store",
-        href: "https://pancakeswap.creator-spring.com/",
-        isHighlighted: true,
-      },
-    ],
-  },
+  // {
+  //   label: "About",
+  //   items: [
+  //     {
+  //       label: "Contact",
+  //       href: "https://docs.pancakeswap.finance/contact-us",
+  //     },
+  //     {
+  //       label: "Blog",
+  //       href: "https://pancakeswap.medium.com/",
+  //     },
+  //     {
+  //       label: "Community",
+  //       href: "https://docs.pancakeswap.finance/contact-us/telegram",
+  //     },
+  //     {
+  //       label: "CAKE",
+  //       href: "https://docs.pancakeswap.finance/tokenomics/cake",
+  //     },
+  //     {
+  //       label: "—",
+  //     },
+  //     {
+  //       label: "Online Store",
+  //       href: "https://pancakeswap.creator-spring.com/",
+  //       isHighlighted: true,
+  //     },
+  //   ],
+  // },
   {
     label: "Help",
     items: [

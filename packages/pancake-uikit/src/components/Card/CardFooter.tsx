@@ -4,7 +4,8 @@ import { space, SpaceProps } from "styled-system";
 export type CardFooterProps = SpaceProps;
 
 const CardFooter = styled.div<CardFooterProps>`
-  border-top: 1px solid ${({ theme }) => theme.colors.cardBorder};
+  background: ${({ theme }) => (theme.colors.gradients.cardHeader)};
+  /* border-top: 1px solid ${({ theme }) => theme.colors.cardBorder}; */
   ${space}
 `;
 

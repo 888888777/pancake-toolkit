@@ -35,8 +35,8 @@ const ProfileIcon = styled(Image)`
 `;
 
 export const NoProfileMenuIcon: React.FC = () => (
-  <MenuIconWrapper borderColor="primary">
-    <WalletFilledIcon color="primary" width="24px" />
+  <MenuIconWrapper borderColor="greyPrimary">
+    <WalletFilledIcon color="greyPrimary" width="24px" />
   </MenuIconWrapper>
 );
 

@@ -36,8 +36,8 @@ const StyledMenuItem = styled.a<StyledMenuItemProps>`
       content: "";
       position: absolute;
       width: calc(100% - 32px);
-      height: 2px;
-      bottom: 8px;
+      height: 4px;
+      bottom: 0;
       background: linear-gradient(90deg, #9F9F9F 0%, #3C3C3C 100%);
     }
   `}
@@ -67,7 +67,7 @@ const StyledMenuItem = styled.a<StyledMenuItemProps>`
   `}
 
   &:hover {
-    background: ${({ theme }) => theme.colors.tertiary};
+    /* background: ${({ theme }) => theme.colors.tertiary}; */
     ${({ $variant }) => $variant === "default" && "border-radius: 16px;"};
   }
 `;

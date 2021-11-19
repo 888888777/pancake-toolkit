@@ -10,6 +10,7 @@ import {
   StyledText,
   StyledSocialLinks,
   StyledToolsContainer,
+  StyledDesc,
 } from "./styles";
 import { FooterProps } from "./types";
 import { ThemeSwitcher } from "../ThemeSwitcher";
@@ -36,13 +37,22 @@ const MenuItem: React.FC<FooterProps> = ({
         {/* <StyledIconMobileContainer display={["block", null, "none"]}>
           <LogoWithTextIcon isDark width="130px" />
         </StyledIconMobileContainer> */}
-        {/* <Flex
+        <Flex
           order={[2, null, 1]}
           flexDirection={["column", null, "row"]}
           justifyContent="space-between"
           alignItems="flex-start"
           mb={["42px", null, "36px"]}
         >
+          <Flex
+            maxWidth="382px"
+            flexDirection='column'
+            display={["none", null, "block"]}
+            alignItems="flex-start"
+          >
+            <LogoWithTextIcon alignSelf="flex-start" isDark width="315px" />
+            <StyledDesc>Cross-chain decentralized derivatives trading platform Copyrights  Eangelmarkets</StyledDesc>
+          </Flex>
           {items?.map((item) => (
             <StyledList key={item.label}>
               <StyledListItem>{item.label}</StyledListItem>
@@ -65,12 +75,11 @@ const MenuItem: React.FC<FooterProps> = ({
               ))}
             </StyledList>
           ))}
-          <Box display={["none", null, "block"]}>
-            <LogoWithTextIcon isDark width="160px" />
-          </Box>
-        </Flex> */}
+          <ul />
+          <ul />
+        </Flex>
         {/* <StyledSocialLinks order={[2]} pb={["42px", null, "32px"]} mb={["0", null, "32px"]} /> */}
-        <StyledToolsContainer
+        {/* <StyledToolsContainer
           order={[1, null, 3]}
           flexDirection={["column", null, "row"]}
           justifyContent="space-between"
@@ -100,7 +109,7 @@ const MenuItem: React.FC<FooterProps> = ({
               {buyCakeLabel}
             </Button>
           </Flex>
-        </StyledToolsContainer>
+        </StyledToolsContainer> */}
       </Flex>
     </StyledFooter>
   );

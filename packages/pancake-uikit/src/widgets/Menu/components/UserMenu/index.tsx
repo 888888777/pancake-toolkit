@@ -10,9 +10,8 @@ import { UserMenuItem } from "./styles";
 
 export const StyledUserMenu = styled(Flex)`
   align-items: center;
-  background-color: linear-gradient(90deg, #585858 0%, #202020 100%);
-  border: 1px solid #828282;
-  /* background-color: ${({ theme }) => theme.colors.tertiary}; */
+  background: ${({ theme }) => theme.colors.gradients.steelGradients};
+  border: 1px solid ${({ theme }) => theme.colors.steelBorder};
   border-radius: 16px;
   box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.1);
   cursor: pointer;

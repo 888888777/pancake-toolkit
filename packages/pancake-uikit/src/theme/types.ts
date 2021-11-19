@@ -30,6 +30,9 @@ export type Shadows = {
 };
 
 export type Gradients = {
+  steelGradients: string;
+  modalHeaderGradients: string;
+  cardBorderGradients: string;
   bubblegum: string;
   inverseBubblegum: string;
   cardHeader: string;
@@ -48,7 +51,12 @@ export type Colors = {
   success: string;
   failure: string;
   warning: string;
+  greyPrimary: string;
+  deepGreyPrimary: string;
+  disableGrey: string;
   cardBorder: string;
+  cardBackground: string;
+  modalBackground: string;
   contrast: string;
   dropdown: string;
   dropdownDeep: string;
@@ -67,6 +75,7 @@ export type Colors = {
   textCommonSecond: string;
   textGrey: string;
   disabled: string;
+  steelBorder: string;
 
   // Gradients
   gradients: Gradients;
