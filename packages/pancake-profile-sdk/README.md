@@ -4,14 +4,17 @@ This package provides some handy functions to retrieve data for Pancakeswap Prof
 
 ##### Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-  - [Initialization](#initialization)
-  - [getUsername](#getUsername)
-  - [getTeam](#getTeam)
-  - [getProfile](#getProfile)
-  - [getAchievements](#getAchievements)
-- [Roadmap](#roadmap)
+- [Pancakeswap Profile SDK](#pancakeswap-profile-sdk)
+        - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [Initialization](#initialization)
+    - [getUsername](#getusername)
+    - [getTeam](#getteam)
+    - [getProfile](#getprofile)
+    - [getAchievements](#getachievements)
+    - [Using images](#using-images)
+  - [Roadmap](#roadmap)
 
 ## Installation
 
@@ -71,7 +74,6 @@ import PancakeProfileSdk from "@pancakeswap/profile-sdk";
 
 const pancakeSdk = new PancakeProfileSdk();
 const username = pancakeSdk.getUsername("0x123456789");
-console.log(username); // "Matatabi"
 ```
 
 ### getTeam
@@ -83,7 +85,6 @@ import PancakeProfileSdk from "@pancakeswap/profile-sdk";
 
 const pancakeSdk = new PancakeProfileSdk();
 const team = pancakeSdk.getTeam(1);
-console.log(team);
 // {
 //   id: 1,
 //   name: "Syrup Storm",
@@ -114,7 +115,6 @@ import PancakeProfileSdk from "@pancakeswap/profile-sdk";
 
 const pancakeSdk = new PancakeProfileSdk();
 const profile = pancakeSdk.getProfile("0x123456789");
-console.log(profile);
 // {
 //   hasRegistered: true
 //   profile: {
@@ -171,7 +171,6 @@ import PancakeProfileSdk from "@pancakeswap/profile-sdk";
 const pancakeSdk = new PancakeProfileSdk();
 
 const achievements = pancakeSdk.getAchievements("0x123456789");
-console.log(achievements);
 // [
 //   {
 //     id: "511080000",

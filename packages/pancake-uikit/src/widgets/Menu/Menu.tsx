@@ -130,7 +130,6 @@ const Menu: React.FC<NavProps> = ({
       {subLinks && (
         <Flex justifyContent="space-around">
           <SubMenuItems items={subLinksWithoutMobile} mt={`${MENU_HEIGHT + 1}px`} activeItem={activeSubItem} />
-
           {subLinksMobileOnly?.length > 0 && (
             <SubMenuItems
               items={subLinksMobileOnly}

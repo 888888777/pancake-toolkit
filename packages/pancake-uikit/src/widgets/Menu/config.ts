@@ -33,6 +33,10 @@ export const links: MenuItemsType[] = [
         href: "https://exchange.pancakeswap.finance/#/pool",
       },
       {
+        label: "Liquidity",
+        href: "https://exchange.pancakeswap.finance/#/pool",
+      },
+      {
         label: "Charts",
         href: "https://exchange.pancakeswap.finance/#/charts",
         iconName: "Chart",
@@ -79,45 +83,45 @@ export const links: MenuItemsType[] = [
       },
     ],
   },
-  {
-    label: "",
-    href: "/",
-    icon: "More",
-    items: [
-      {
-        label: "Info & Analytics",
-        href: "/",
-      },
-      {
-        label: "IFO Token Sales",
-        href: "/",
-        status: status.SOON,
-      },
-      {
-        type: DropdownMenuItemType.DIVIDER,
-      },
-      {
-        label: "NFT Collectibles",
-        href: "/",
-      },
-      {
-        label: "Team Leaderboard",
-        href: "/",
-      },
-      {
-        type: DropdownMenuItemType.DIVIDER,
-      },
-      {
-        label: "Blog",
-        href: "/",
-      },
-      {
-        label: "Docs & Guides",
-        href: "/",
-        type: DropdownMenuItemType.EXTERNAL_LINK,
-      },
-    ],
-  },
+  // {
+  //   label: "",
+  //   href: "/",
+  //   icon: "More",
+  //   items: [
+  //     {
+  //       label: "Info & Analytics",
+  //       href: "/",
+  //     },
+  //     {
+  //       label: "IFO Token Sales",
+  //       href: "/",
+  //       status: status.SOON,
+  //     },
+  //     {
+  //       type: DropdownMenuItemType.DIVIDER,
+  //     },
+  //     {
+  //       label: "NFT Collectibles",
+  //       href: "/",
+  //     },
+  //     {
+  //       label: "Team Leaderboard",
+  //       href: "/",
+  //     },
+  //     {
+  //       type: DropdownMenuItemType.DIVIDER,
+  //     },
+  //     {
+  //       label: "Blog",
+  //       href: "/",
+  //     },
+  //     {
+  //       label: "Docs & Guides",
+  //       href: "/",
+  //       type: DropdownMenuItemType.EXTERNAL_LINK,
+  //     },
+  //   ],
+  // },
 ];
 
 export const userMenulinks: DropdownMenuItems[] = [
