@@ -18,6 +18,7 @@ export const variants = {
   SUCCESS: "success",
   LIGHT: "light",
   STEEL: "steel",
+  SUCCESS_TEXT: "success-text",
 } as const;
 
 export type Scale = typeof scales[keyof typeof scales];

@@ -51,6 +51,7 @@ export type Colors = {
   success: string;
   failure: string;
   warning: string;
+  opened: string;
   greyPrimary: string;
   deepGreyPrimary: string;
   disableGrey: string;

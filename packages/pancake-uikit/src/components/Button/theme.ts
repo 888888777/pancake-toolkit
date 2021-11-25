@@ -67,4 +67,9 @@ export const styleVariants = {
     borderWidth: "1px",
     color: "text",
   },
+  [variants.SUCCESS_TEXT]: {
+    backgroundColor: "transparent",
+    color: "success",
+    boxShadow: "none",
+  },
 };
